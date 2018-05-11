@@ -13,5 +13,6 @@
 @property (readonly, nonatomic) NSString *step;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
+- (NSDictionary *)dictionary;
 
 @end

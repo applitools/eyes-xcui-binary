@@ -14,5 +14,6 @@
 @property (readonly, nonatomic) NSString *session;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
+- (NSDictionary *)dictionary;
 
 @end

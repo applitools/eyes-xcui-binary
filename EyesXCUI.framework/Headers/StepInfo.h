@@ -23,5 +23,6 @@
 @property (assign, readonly, nonatomic) BOOL hasCurrentImage;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
+- (NSDictionary *)dictionary;
 
 @end

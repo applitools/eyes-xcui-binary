@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The match settings to be used for the session.
  */
-@property (strong, readonly, nonatomic) ImageMatchSettings *defaultMatchSettings;
+@property (strong, nonatomic) ImageMatchSettings *defaultMatchSettings;
 
 /**
  Whether or not new tests are saved by default. YES by default.

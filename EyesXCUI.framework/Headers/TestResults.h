@@ -10,6 +10,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "SessionUrls.h"
 #import "StepInfo.h"
+#import "DefaultMatchSettings.h"
 
 typedef NS_ENUM(NSUInteger, TestResultStatus) {
     TestResultStatusPassed,
@@ -88,7 +89,7 @@ typedef NS_ENUM(NSUInteger, TestResultStatus) {
 
 @property (readonly, nonatomic) NSString *secretToken;
 
-@property (readonly, nonatomic) NSString *resulsId;
+@property (readonly, nonatomic) NSString *resultsId;
 
 @property (readonly, nonatomic) NSString *appName;
 
@@ -116,8 +117,11 @@ typedef NS_ENUM(NSUInteger, TestResultStatus) {
 
 @property (readonly, nonatomic) SessionUrls *apiUrls;
 
+@property (readonly, nonatomic) DefaultMatchSettings *defaultMatchSettings;
+
 @property (readonly, copy, nonatomic) NSArray<StepInfo *> *stepsInfo;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
+- (NSDictionary *)dictionary;
 
 @end

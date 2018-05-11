@@ -15,5 +15,6 @@
 @property (readonly, nonatomic) NSString *diffImage;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
+- (NSDictionary *)dictionary;
 
 @end
