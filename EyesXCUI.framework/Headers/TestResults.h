@@ -7,10 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
-#import "SessionUrls.h"
-#import "StepInfo.h"
-#import "DefaultMatchSettings.h"
 
 typedef NS_ENUM(NSUInteger, TestResultStatus) {
     TestResultStatusPassed,
@@ -66,14 +62,14 @@ typedef NS_ENUM(NSUInteger, TestResultStatus) {
 @property (assign, readonly, nonatomic) NSInteger noneMatches;
 
 /**
- The URL where test results can be viewed.
- */
-@property (readonly, nonatomic) NSString *url;
-
-/**
  Whether or not this is a new test.
  */
 @property (assign, readonly, nonatomic) BOOL isNew;
+
+/**
+ Whether or not this test passed.
+ */
+@property (assign, readonly, nonatomic) BOOL isPassed;
 
 /**
  The result status.
@@ -81,47 +77,10 @@ typedef NS_ENUM(NSUInteger, TestResultStatus) {
 @property (assign, readonly, nonatomic) TestResultStatus status;
 
 /**
- Whether or not this test passed.
+ The URL where test results can be viewed.
  */
-@property (assign, readonly, nonatomic) BOOL isPassed;
-
-@property (readonly, nonatomic) NSString *name;
-
-@property (readonly, nonatomic) NSString *secretToken;
-
-@property (readonly, nonatomic) NSString *resultsId;
-
-@property (readonly, nonatomic) NSString *appName;
-
-@property (readonly, nonatomic) NSString *batchName;
-
-@property (readonly, nonatomic) NSString *batchId;
-
-@property (readonly, nonatomic) NSString *branchName;
-
-@property (readonly, nonatomic) NSString *hostOS;
-
-@property (readonly, nonatomic) NSString *hostApp;
-
-@property (assign, readonly, nonatomic) CGSize hostDisplaySize;
-
-@property (readonly, nonatomic) NSString *startedAt;
-
-@property (assign, readonly, nonatomic) NSInteger duration;
-
-@property (assign, readonly, nonatomic) BOOL isDifferent;
-
-@property (assign, readonly, nonatomic) BOOL isAborted;
-
-@property (readonly, nonatomic) SessionUrls *appUrls;
-
-@property (readonly, nonatomic) SessionUrls *apiUrls;
-
-@property (readonly, nonatomic) DefaultMatchSettings *defaultMatchSettings;
-
-@property (readonly, copy, nonatomic) NSArray<StepInfo *> *stepsInfo;
+@property (readonly, nonatomic) NSString *url;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
-- (NSDictionary *)dictionary;
 
 @end
