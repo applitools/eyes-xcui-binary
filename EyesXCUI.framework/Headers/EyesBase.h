@@ -44,7 +44,12 @@ NS_ASSUME_NONNULL_BEGIN
  The host OS of running test.
  */
 @property (copy, nonatomic, nullable) NSString *hostOS;
-    
+
+/**
+ The name of the baseline's environment.
+ */
+@property (strong, nonatomic, nullable) NSString *baselineEnvName;
+
 /**
  The batch in which context future tests will run or nil if tests are to run standalone.
  */
@@ -74,6 +79,12 @@ NS_ASSUME_NONNULL_BEGIN
  Whether or not new tests are saved by default. YES by default.
  */
 @property (assign, nonatomic) BOOL saveNewTests;
+
+/**
+ Set whether or not failed tests are saved by default.
+ True if failed tests should be saved by default, false otherwise.
+ */
+@property (assign, nonatomic) BOOL saveFailedTests;
 
 /**
  Automatically save differences as a baseline. NO by default.

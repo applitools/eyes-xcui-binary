@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol XCUICheckTargetProtocol <NSObject>
 
-- (XCUIElement *)targetElement;
+- (nullable XCUIElement *)targetElement;
 
 @end
 
@@ -22,7 +22,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithTargetElement:(XCUIElement *)targetElement;
 
-- (XCUICheckSettings *)region:(Region *)region;
+- (instancetype)ignoreXCUIElements:(NSArray<XCUIElement *> *)elements;
+- (instancetype)layoutXCUIElements:(NSArray<XCUIElement *> *)elements;
+- (instancetype)strictXCUIElements:(NSArray<XCUIElement *> *)elements;
+- (instancetype)contentXCUIElements:(NSArray<XCUIElement *> *)elements;
+
+- (instancetype)floatingXCUIElement:(XCUIElement *)element maxUpOffset:(NSInteger)maxUpOffset maxDownOffset:(NSInteger)maxDownOffset maxRightOffset:(NSInteger)maxRightOffset maxLeftOffset:(NSInteger)maxLeftOffset;
+
+- (instancetype)region:(Region *)region;
 
 @end
 

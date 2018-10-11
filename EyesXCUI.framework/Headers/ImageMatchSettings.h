@@ -34,6 +34,21 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nonatomic) NSArray<Region *> *ignoredRegions;
 
 /**
+ The array of regions to check using the Layout method.
+ */
+@property (copy, nonatomic) NSArray<Region *> *layoutRegions;
+
+/**
+ The array of regions to check using the Strict method.
+ */
+@property (copy, nonatomic) NSArray<Region *> *strictRegions;
+
+/**
+ The arrayof regions to check using the Content method.
+ */
+@property (copy, nonatomic) NSArray<Region *> *contentRegions;
+
+/**
  Sets an array of floating regions.
  */
 @property (copy, nonatomic) NSArray<FloatingMatchSettings *> *floatingRegions;

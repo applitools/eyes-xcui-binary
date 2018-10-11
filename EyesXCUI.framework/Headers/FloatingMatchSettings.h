@@ -23,9 +23,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, readonly, nonatomic) NSInteger maxLeftOffset;
 @property (assign, readonly, nonatomic) NSInteger maxRightOffset;
 
-- (instancetype)initWithLeft:(NSInteger)left top:(NSInteger)top width:(NSInteger)width height:(NSInteger)height maxUpOffset:(NSInteger)maxUpOffset maxDownOffset:(NSInteger)maxDownOffset maxLeftOffset:(NSInteger)maxLeftOffset maxRightOffset:(NSInteger)maxRightOffset;
+- (instancetype)initWithLeft:(NSInteger)left
+                         top:(NSInteger)top
+                       width:(NSInteger)width
+                      height:(NSInteger)height
+                 maxUpOffset:(NSInteger)maxUpOffset
+               maxDownOffset:(NSInteger)maxDownOffset
+               maxLeftOffset:(NSInteger)maxLeftOffset
+              maxRightOffset:(NSInteger)maxRightOffset;
+
+- (instancetype)initWithRegion:(FloatingMatchSettings *)region;
 - (NSDictionary *)dictionary;
-+ (instancetype)scaledRegionFromRegion:(FloatingMatchSettings *)region scaleRatio:(CGFloat)scaleRatio;
 
 @end
 

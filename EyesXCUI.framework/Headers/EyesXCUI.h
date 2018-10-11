@@ -22,8 +22,6 @@ FOUNDATION_EXPORT const unsigned char EyesXCUIVersionString[];
 #import <EyesXCUI/EyesBase.h>
 #import <EyesXCUI/EyesScreenshot.h>
 #import <EyesXCUI/FloatingMatchSettings.h>
-#import <EyesXCUI/GetFloatingRegionProtocol.h>
-#import <EyesXCUI/GetRegionProtocol.h>
 #import <EyesXCUI/ImageMatchSettings.h>
 #import <EyesXCUI/MatchLevel.h>
 #import <EyesXCUI/MatchResult.h>
